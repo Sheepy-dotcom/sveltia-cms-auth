@@ -3,9 +3,8 @@ main = "src/index.js"
 compatibility_date = "2023-03-24"
 
 # Runtime environment for the GitHub OAuth handshake.
-# Client ID and allowed domains are public (safe to commit); the client SECRET
+# The Client ID is public (safe to commit); the client SECRET
 # is NOT here — it is pushed as an encrypted Worker secret at deploy time from
 # the build secret of the same name (see the "deploy" script in package.json).
 [vars]
 GITHUB_CLIENT_ID = "Ov23liymEzIUDo18WVCx"
-ALLOWED_DOMAINS = "tvtattler.com"
