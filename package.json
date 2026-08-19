@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "wrangler deploy && if [ -n \"$GITHUB_CLIENT_SECRET\" ]; then printf %s \"$GITHUB_CLIENT_SECRET\" | wrangler secret put GITHUB_CLIENT_SECRET; fi",
     "check": "pnpm run '/^check:.*/'",
     "check:audit": "pnpm audit",
     "check:cspell": "cspell --no-progress",
